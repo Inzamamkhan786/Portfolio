@@ -1,16 +1,118 @@
-# React + Vite
+# 🚀 Md Inzamamul Haque — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal developer portfolio website!
+This portfolio showcases my projects, skills, and experience as a **Full Stack Developer & ML Engineer**.
 
-Currently, two official plugins are available:
+🌐 **Live Website:**
+👉 https://portfolio-ten-topaz-70.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+# 👨‍💻 About Me
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Hi, I'm **Md Inzamamul Haque**
+🎓 B.Tech CSE (HCI & Gaming Technology) — IIIT Nagpur
+💻 Full Stack Developer
+🤖 Machine Learning Enthusiast
+🎨 UI/UX Designer
 
-## Expanding the ESLint configuration
+I enjoy building scalable web applications, AI-based systems, and clean UI designs.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# 🛠️ Tech Stack
+
+### Frontend
+
+* HTML5
+* CSS3
+* JavaScript
+
+### Tools & Platforms
+
+* Git
+* GitHub
+* Vercel
+* VS Code
+
+---
+
+# 📂 Featured Projects
+
+## 📄 Async Document System
+
+* Asynchronous document processing system
+* Queue-based architecture
+* Live progress tracking
+
+## 💳 Billing System
+
+* Full stack billing application
+* User authentication
+* Invoice generation
+
+## 🐱 Cat Gallery
+
+* Responsive image gallery
+* Clean UI design
+
+## 📈 Credit Score Predictor
+
+* Machine Learning model
+* Predicts credit score
+
+## 🛒 E-Commerce UI
+
+* Responsive e-commerce interface
+* Modern UI design
+
+## 🎤 Interview Simulation
+
+* AI-based interview simulation system
+
+---
+
+# ✨ Features
+
+* Fully Responsive Design
+* Modern UI/UX
+* Smooth Animations
+* Project Showcase
+* Contact Section
+* Clean Code Structure
+
+---
+
+# 🚀 Deployment
+
+This portfolio is deployed using **Vercel**
+
+Live URL:
+https://portfolio-ten-topaz-70.vercel.app/
+
+---
+
+# 📸 Portfolio Preview
+
+Visit the live website to explore all projects and features.
+
+---
+
+# 📬 Contact Me
+
+📧 Email: [haquemdinzamamul3@email.com](mailto:haquemdinzamamul3@email.com)
+💼 LinkedIn: (Add your LinkedIn link here)
+🐙 GitHub: https://github.com/Inzamamkhan786
+
+---
+
+# ⭐ Support
+
+If you like my portfolio, consider giving it a ⭐ on GitHub!
+
+---
+
+# 🧑‍💻 Author
+
+**Md Inzamamul Haque**
+Full Stack Developer | ML Engineer | UI/UX Designer
