@@ -311,56 +311,60 @@
         /* ================================================================
            CONTACT FORM — Web3Forms (truly zero-setup, free, works now)
            ================================================================ */
-        async function sendEmail() {
-            const name = document.getElementById('cf-name').value.trim();
-            const email = document.getElementById('cf-email').value.trim();
-            const subject = document.getElementById('cf-subject').value.trim();
-            const message = document.getElementById('cf-msg').value.trim();
-            const status = document.getElementById('formStatus');
-            const btn = document.getElementById('sendBtn');
+        function sendEmail() {
 
-            if (!name || !email || !subject || !message) {
-                status.textContent = '⚠ Please fill in all fields.';
-                status.style.color = 'var(--gold)'; return;
-            }
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                status.textContent = '⚠ Please enter a valid email address.';
-                status.style.color = 'var(--gold)'; return;
-            }
+const name = document.getElementById('cf-name').value.trim();
+const email = document.getElementById('cf-email').value.trim();
+const subject = document.getElementById('cf-subject').value.trim();
+const message = document.getElementById('cf-msg').value.trim();
 
-            btn.disabled = true;
-            btn.textContent = 'Sending…';
-            status.textContent = ''; status.style.color = 'var(--text3)';
+const status = document.getElementById('formStatus');
+const btn = document.getElementById('sendBtn');
 
-            try {
-                const res = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-                    body: JSON.stringify({
-                        /* ── IMPORTANT: Get your FREE key at https://web3forms.com
-                           Enter your email → get a key → paste it below.
-                           Current key below is a placeholder — replace it!       */
-                        access_key: 'YOUR_WEB3FORMS_KEY_HERE',
-                        name, email, subject, message,
-                        from_name: name,
-                    }),
-                });
-                const data = await res.json();
-                if (data.success) {
-                    status.textContent = '✓ Message sent! I will get back to you soon.';
-                    status.style.color = 'var(--green)';
-                    btn.textContent = '✓ Sent!';
-                    btn.style.cssText = 'background:rgba(16,185,129,.1);border-color:rgba(16,185,129,.28);color:var(--green)';
-                    ['cf-name', 'cf-email', 'cf-subject', 'cf-msg'].forEach(id => document.getElementById(id).value = '');
-                    setTimeout(() => { btn.disabled = false; btn.textContent = 'Send Message'; btn.style.cssText = ''; }, 4000);
-                } else throw new Error(data.message || 'Failed');
-            } catch (err) {
-                console.error(err);
-                status.innerHTML = '✗ Could not send. Email directly: <a href="mailto:haquemdinzamamul3@gmail.com" style="color:var(--cyan)">haquemdinzamamul3@gmail.com</a>';
-                status.style.color = '#ef4444';
-                btn.disabled = false; btn.textContent = 'Try Again';
-            }
-        }
+if (!name || !email || !subject || !message) {
+status.textContent = '⚠ Please fill in all fields.';
+status.style.color = 'var(--gold)';
+return;
+}
+
+btn.disabled = true;
+btn.textContent = 'Sending...';
+
+emailjs.send(
+"service_rafkbra",
+"template_cdjcmxu",
+{
+name: name,
+email: email,
+title: subject,
+message: message
+}
+)
+.then(function(response) {
+
+status.textContent = "✅ Message sent successfully!";
+status.style.color = "var(--green)";
+
+btn.disabled = false;
+btn.textContent = "Send Message";
+
+document.getElementById('cf-name').value = "";
+document.getElementById('cf-email').value = "";
+document.getElementById('cf-subject').value = "";
+document.getElementById('cf-msg').value = "";
+
+})
+.catch(function(error) {
+
+status.textContent = "❌ Failed to send message";
+status.style.color = "#ef4444";
+
+btn.disabled = false;
+btn.textContent = "Try Again";
+
+});
+
+}
 
         document.querySelectorAll('.img-slider').forEach(slider => {
 
