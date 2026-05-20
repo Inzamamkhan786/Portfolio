@@ -1,0 +1,101 @@
+.skills-section {
+  position: relative;
+  z-index: 10;
+}
+
+.section-header {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sec-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.sec-line {
+  width: 50px;
+  height: 2px;
+  background: var(--accent-cyan);
+}
+
+.sec-info {
+  text-align: left;
+}
+
+.sec-rule {
+  width: 30px;
+  height: 2px;
+  background: var(--accent-purple);
+  margin-bottom: 0.5rem;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.skill-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-highlight);
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover .skill-icon-wrapper {
+  background: rgba(6, 182, 212, 0.1);
+  border-color: var(--accent-cyan);
+  transform: rotate(5deg) scale(1.1);
+}
+
+.skill-icon {
+  font-size: 1.8rem;
+}
+
+.skill-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.skill-desc {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  font-size: 0.95rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  color: #D4AF37; /* Keeping the gold touch */
+  font-weight: 500;
+}

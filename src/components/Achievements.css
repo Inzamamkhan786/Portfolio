@@ -1,0 +1,106 @@
+.achievements-section {
+  overflow: hidden;
+  padding-bottom: 6rem;
+}
+
+.achievements-slider {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  padding: 1rem 0 3rem 0;
+  display: flex;
+}
+
+.achievements-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 35s linear infinite;
+  gap: 2rem;
+  padding-left: 2rem;
+}
+
+.achievements-slider:hover .achievements-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 1rem)); } /* -50% because we have two identical sets, and -1rem for half the gap */
+}
+
+.achievement-card {
+  width: 350px;
+  flex-shrink: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.ac-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+}
+
+.ac-icon.gold { color: #D4AF37; box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+.ac-icon.blue { color: #3B82F6; box-shadow: 0 0 15px rgba(59, 130, 246, 0.2); }
+.ac-icon.green { color: #10B981; box-shadow: 0 0 15px rgba(16, 185, 129, 0.2); }
+.ac-icon.purple { color: #8B5CF6; box-shadow: 0 0 15px rgba(139, 92, 246, 0.2); }
+.ac-icon.pink { color: #EC4899; box-shadow: 0 0 15px rgba(236, 72, 153, 0.2); }
+
+.ac-content {
+  flex-grow: 1;
+  margin-bottom: 2rem;
+}
+
+.ac-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+}
+
+.ac-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.ac-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.badge-gold { background: rgba(212, 175, 55, 0.1); color: #D4AF37; }
+.badge-blue { background: rgba(59, 130, 246, 0.1); color: #3B82F6; }
+.badge-green { background: rgba(16, 185, 129, 0.1); color: #10B981; }
+.badge-purple { background: rgba(139, 92, 246, 0.1); color: #8B5CF6; }
+.badge-pink { background: rgba(236, 72, 153, 0.1); color: #EC4899; }
+
+.achievements-hint {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+  opacity: 0.6;
+}
