@@ -31,9 +31,9 @@ const ProjectMedia = ({ images, video, iframeVideo, title }) => {
     return (
       <div className="project-media-wrapper" style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
         <iframe 
-          src={iframeVideo} 
-          style={{ width: '100%', height: '100%', border: 'none' }}
-          allow="autoplay"
+          src={iframeVideo.includes('?') ? `${iframeVideo}&autoplay=1&mute=1` : `${iframeVideo}?autoplay=1&mute=1`} 
+          style={{ width: '100%', height: '100%', border: 'none', objectFit: 'cover' }}
+          allow="autoplay; fullscreen; encrypted-media"
           title={`${title} Video`}
         ></iframe>
       </div>
