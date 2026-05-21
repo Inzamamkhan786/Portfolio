@@ -37,7 +37,7 @@ const projectsData = [
     category: 'vr',
     title: 'AR/VR Interview Simulator',
     desc: 'An immersive VR interview simulator built for Meta Quest 3 with realistic office environments, AI-driven questions using Whisper AI for voice processing and Ollama for local LLM responses.',
-    video: '/Videos/VN20260517_205627.mp4',
+    images: ['/images/InterviewSimulation.png'],
     tags: ['Unity', 'WebXR', 'Meta Quest 3', 'Whisper AI', 'Ollama', 'Node.js'],
     demoLink: 'https://drive.google.com/file/d/1VTkDSjnYetQ7YRkX46__qhGCdYoGVewi/view?usp=sharing'
   },
