@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const ProjectMedia = ({ images, video, title }) => {
+const ProjectMedia = ({ images, video, iframeVideo, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -23,6 +23,19 @@ const ProjectMedia = ({ images, video, title }) => {
           playsInline
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
+      </div>
+    );
+  }
+
+  if (iframeVideo) {
+    return (
+      <div className="project-media-wrapper" style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
+        <iframe 
+          src={iframeVideo} 
+          style={{ width: '100%', height: '100%', border: 'none' }}
+          allow="autoplay"
+          title={`${title} Video`}
+        ></iframe>
       </div>
     );
   }
