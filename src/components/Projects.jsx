@@ -123,7 +123,7 @@ const Projects = () => {
                 className="project-card glass-card"
               >
                 <div className="project-img-wrapper">
-                  <ProjectMedia images={project.images} video={project.video} title={project.title} />
+                  <ProjectMedia images={project.images} video={project.video} iframeVideo={project.iframeVideo} title={project.title} />
                   <div className="project-overlay">
                     <div className="project-links">
                       {project.codeLink && (
