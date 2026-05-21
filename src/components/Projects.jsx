@@ -124,20 +124,22 @@ const Projects = () => {
               >
                 <div className="project-img-wrapper">
                   <ProjectMedia images={project.images} video={project.video} iframeVideo={project.iframeVideo} title={project.title} />
-                  <div className="project-overlay">
-                    <div className="project-links">
-                      {project.codeLink && (
-                        <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="project-link-icon">
-                          <FaGithub size={24} />
-                        </a>
-                      )}
-                      {project.demoLink && (
-                        <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link-icon">
-                          <FaExternalLinkAlt size={22} />
-                        </a>
-                      )}
+                  {!project.iframeVideo && (
+                    <div className="project-overlay">
+                      <div className="project-links">
+                        {project.codeLink && (
+                          <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="project-link-icon">
+                            <FaGithub size={24} />
+                          </a>
+                        )}
+                        {project.demoLink && (
+                          <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link-icon">
+                            <FaExternalLinkAlt size={22} />
+                          </a>
+                        )}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
                 
                 <div className="project-content">
