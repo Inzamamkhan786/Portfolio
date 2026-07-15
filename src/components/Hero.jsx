@@ -43,7 +43,7 @@ const Hero = () => {
           </p>
           
           <div className="hero-actions">
-            <a href="https://drive.google.com/file/d/1kX4nifmpOPD5wrVOWRlvwzWWukRsSJ7m/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href="https://drive.google.com/file/d/1LQZ4ZR1g9mD6gGCNszk7rJ9SAY9B0yd-/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               Download Resume
             </a>
             <div className="hero-socials">

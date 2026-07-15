@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-right desktop-only">
-          <a href="https://drive.google.com/file/d/1kX4nifmpOPD5wrVOWRlvwzWWukRsSJ7m/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-outline resume-btn">
+          <a href="https://drive.google.com/file/d/1LQZ4ZR1g9mD6gGCNszk7rJ9SAY9B0yd-/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-outline resume-btn">
             Resume
           </a>
         </div>
@@ -75,7 +75,7 @@ const Navbar = () => {
               <span className="nav-text">{link.name}</span>
             </a>
           ))}
-          <a href="https://drive.google.com/file/d/1kX4nifmpOPD5wrVOWRlvwzWWukRsSJ7m/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-outline mobile-resume">
+          <a href="https://drive.google.com/file/d/1LQZ4ZR1g9mD6gGCNszk7rJ9SAY9B0yd-/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-outline mobile-resume">
             Resume
           </a>
         </motion.div>

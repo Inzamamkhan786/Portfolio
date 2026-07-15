@@ -11,7 +11,7 @@ const Footer = () => {
           <a href="#projects" className="flink">Projects</a>
           <a href="#contact" className="flink">Contact</a>
           <a 
-            href="https://drive.google.com/file/d/1kX4nifmpOPD5wrVOWRlvwzWWukRsSJ7m/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1LQZ4ZR1g9mD6gGCNszk7rJ9SAY9B0yd-/view?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="flink"

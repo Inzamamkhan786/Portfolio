@@ -108,7 +108,7 @@ const Contact = () => {
               <a href="https://www.codechef.com/users/md_haque_123" target="_blank" rel="noopener noreferrer" className="soc-link" title="CodeChef">
                 <span className="soc-text-icon">CC</span>
               </a>
-              <a href="https://drive.google.com/file/d/1kX4nifmpOPD5wrVOWRlvwzWWukRsSJ7m/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="soc-link" title="Resume">
+              <a href="https://drive.google.com/file/d/1LQZ4ZR1g9mD6gGCNszk7rJ9SAY9B0yd-/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="soc-link" title="Resume">
                 <FaFileAlt size={22} />
               </a>
             </div>
