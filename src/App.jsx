@@ -37,7 +37,7 @@ function App() {
             </div>
             
             <h2 className="loader-name">MD INZAMAMUL HAQUE</h2>
-            <p className="loader-roles">FULL STACK DEVELOPER | ML ENGINEER</p>
+            <p className="loader-roles">FULL STACK DEVELOPER | AI AGENTS | ML ENGINEER</p>
             
             <div className="loader-progress-container">
               <div className="loader-progress-bar" style={{ width: `${progress}%` }}></div>

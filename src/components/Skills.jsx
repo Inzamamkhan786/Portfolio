@@ -16,6 +16,12 @@ const skillsData = [
     tags: ['Node.js', 'Express.js', 'REST APIs', 'JWT', 'PostgreSQL', 'MongoDB']
   },
   {
+    icon: '🤖',
+    title: 'Generative AI & AI Agents',
+    desc: 'Designing autonomous multi-agent workflows, stateful graphs, and RAG pipelines using LangGraph and LangChain, integrated with local and cloud LLMs.',
+    tags: ['LangGraph', 'LangChain', 'RAG', 'AI Agents', 'LLMs', 'Prompt Engineering']
+  },
+  {
     icon: '🧠',
     title: 'Machine Learning',
     desc: 'Developing ML models for classification, prediction, and data analysis using Python and Scikit-learn with real-world datasets.',

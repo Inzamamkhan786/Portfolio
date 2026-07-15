@@ -34,12 +34,12 @@ const Hero = () => {
           
           <div className="hero-roles">
             <span className="role-tag">Full Stack Developer</span>
-            <span className="role-tag">Backend Engineer</span>
+            <span className="role-tag">AI Agent Engineer</span>
             <span className="role-tag">ML Engineer</span>
           </div>
           
           <p className="hero-description">
-            I build scalable full-stack systems, craft intelligent ML models, and create immersive digital experiences — from cloud platforms to AR/VR simulations.
+            I build scalable full-stack systems, design autonomous AI agents using LangChain & LangGraph, and craft intelligent ML models and immersive AR/VR experiences.
           </p>
           
           <div className="hero-actions">
@@ -81,6 +81,13 @@ const Hero = () => {
               transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             >
               React.js
+            </motion.div>
+            <motion.div 
+              className="floating-badge badge-ai glass-panel"
+              animate={{ y: [0, 12, 0] }}
+              transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 1.5 }}
+            >
+              AI Agents
             </motion.div>
             <motion.div 
               className="floating-badge badge-node glass-panel"

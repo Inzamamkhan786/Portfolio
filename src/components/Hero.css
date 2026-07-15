@@ -176,6 +176,12 @@
   border-left: 3px solid #61DAFB;
 }
 
+.badge-ai {
+  top: 15%;
+  right: -10px;
+  border-left: 3px solid var(--accent-pink);
+}
+
 .badge-node {
   bottom: 20%;
   right: -20px;

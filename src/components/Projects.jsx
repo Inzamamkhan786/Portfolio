@@ -26,6 +26,16 @@ const projectsData = [
   {
     id: 2,
     category: 'fullstack',
+    title: 'Rentro — Vehicle Rental Platform',
+    desc: 'A peer-to-peer vehicle rental ecosystem with Consumer and Provider roles. Features custom document verification (License/RC), pricing management, booking scheduling, and a real-time support chat system.',
+    images: ['/images/rentro_dashboard.png', '/images/rentro_provider.png'],
+    tags: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'Multer', 'REST API'],
+    codeLink: 'https://github.com/Inzamamkhan786/Rentro',
+    demoLink: 'https://rentro-tau.vercel.app/'
+  },
+  {
+    id: 3,
+    category: 'fullstack',
     title: 'IngeneousStore — E-Commerce',
     desc: 'A full-stack e-commerce platform with product browsing, cart management, user authentication, delivery address flow, and complete order placement with COD support.',
     images: ['/images/E-Commerce1.png', '/images/E-Commerce2.png', '/images/E-Commerce3.png', '/images/E-Commerce4.png', '/images/E-Commerce5.png', '/images/E-Commerce6.png'],
@@ -33,7 +43,7 @@ const projectsData = [
     codeLink: 'https://github.com/Inzamamkhan786/E-commerce_Ingeneous_Store'
   },
   {
-    id: 3,
+    id: 4,
     category: 'vr',
     title: 'AR/VR Interview Simulator',
     desc: 'An immersive VR interview simulator built for Meta Quest 3 with realistic office environments, AI-driven questions using Whisper AI for voice processing and Ollama for local LLM responses.',
@@ -42,7 +52,26 @@ const projectsData = [
     demoLink: 'https://drive.google.com/file/d/1VTkDSjnYetQ7YRkX46__qhGCdYoGVewi/view?usp=sharing'
   },
   {
-    id: 4,
+    id: 5,
+    category: 'ml',
+    title: 'NovaCRM — AI Marketing Platform',
+    desc: 'An AI-native CRM and marketing platform featuring smart audience segmentation, multi-channel campaigns (Email, SMS, WhatsApp, RCS), async delivery simulation, and a GPT-4o-powered AI Assistant to orchestrate campaigns.',
+    images: ['/images/novacrm_dashboard.png', '/images/novacrm_campaign.png'],
+    tags: ['React', 'Node.js', 'Express.js', 'PostgreSQL', 'OpenAI API', 'Tailwind CSS'],
+    codeLink: 'https://github.com/Inzamamkhan786/CRM_Marketing',
+    demoLink: 'https://crm-marketing-n61t.vercel.app'
+  },
+  {
+    id: 6,
+    category: 'ml',
+    title: 'Autonomous Blog Writing Agent',
+    desc: 'A stateful multi-agent system built using LangGraph that orchestrates specialized agents—Planner, Researcher, Writer, and Editor—to collaboratively write, review, and refine comprehensive articles with citation support.',
+    images: ['/images/blog_agent_dashboard.png', '/images/blog_agent_graph.png'],
+    tags: ['LangGraph', 'LangChain', 'Streamlit', 'Python', 'Google Gemini'],
+    codeLink: 'https://github.com/Inzamamkhan786/blog-writing-agent'
+  },
+  {
+    id: 7,
     category: 'fullstack',
     title: 'Meowtopia',
     desc: 'A cat-focused web platform where users can explore cat breeds via public APIs, share cat-related content, and interact with a community of cat lovers.',
@@ -51,7 +80,7 @@ const projectsData = [
     codeLink: 'https://github.com/Inzamamkhan786/Meowtopia'
   },
   {
-    id: 5,
+    id: 8,
     category: 'ml',
     title: 'Credit Score Prediction',
     desc: 'A machine learning model that evaluates financial parameters — income, credit utilization, late payments, credit lines — to predict whether an applicant has a Good or Risky credit profile.',
@@ -59,7 +88,7 @@ const projectsData = [
     tags: ['Python', 'Scikit-learn', 'Pandas', 'Machine Learning', 'Data Analysis']
   },
   {
-    id: 6,
+    id: 9,
     category: 'fullstack',
     title: 'Async Document System',
     desc: 'An asynchronous document processing platform where users can upload documents, track real-time processing status, and download results efficiently using background workers and queue-based architecture.',
@@ -105,7 +134,7 @@ const Projects = () => {
             >
               {btn === 'all' ? 'All' : 
                btn === 'fullstack' ? 'Full Stack' : 
-               btn === 'ml' ? 'Machine Learning' : 'AR / VR'}
+               btn === 'ml' ? 'AI & ML' : 'AR / VR'}
             </button>
           ))}
         </div>
@@ -145,7 +174,7 @@ const Projects = () => {
                 <div className="project-content">
                   <span className="project-badge">{
                     project.category === 'fullstack' ? 'Full Stack' : 
-                    project.category === 'ml' ? 'Machine Learning' : 'AR / VR'
+                    project.category === 'ml' ? 'AI & ML' : 'AR / VR'
                   }</span>
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-desc">{project.desc}</p>
