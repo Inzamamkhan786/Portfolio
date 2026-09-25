@@ -59,6 +59,7 @@ const projectsData = [
     title: 'AR/VR Interview Simulator',
     desc: 'An immersive VR interview simulator built for Meta Quest 3 with realistic office environments, AI-driven questions using Whisper AI for voice processing and Ollama for local LLM responses.',
     iframeVideo: 'https://drive.google.com/file/d/1VTkDSjnYetQ7YRkX46__qhGCdYoGVewi/preview',
+    thumbnail: '/images/InterviewSimulation.png',
     tags: ['Unity', 'WebXR', 'Meta Quest 3', 'Whisper AI', 'Ollama', 'Node.js'],
     demoLink: 'https://drive.google.com/file/d/1VTkDSjnYetQ7YRkX46__qhGCdYoGVewi/view?usp=sharing'
   },
@@ -163,7 +164,7 @@ const Projects = () => {
                 className="project-card glass-card"
               >
                 <div className="project-img-wrapper">
-                  <ProjectMedia images={project.images} video={project.video} iframeVideo={project.iframeVideo} title={project.title} />
+                  <ProjectMedia images={project.images} video={project.video} iframeVideo={project.iframeVideo} thumbnail={project.thumbnail} title={project.title} />
                   {!project.iframeVideo && (
                     <div className="project-overlay">
                       <div className="project-links">

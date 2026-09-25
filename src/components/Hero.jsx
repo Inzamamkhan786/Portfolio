@@ -57,7 +57,7 @@ const Hero = () => {
                 rel="noopener noreferrer" 
                 className="btn btn-outline hero-resume-btn-secondary"
               >
-                Software Developer Resume
+                Software Resume
               </a>
             </div>
             <div className="hero-socials">

@@ -111,7 +111,7 @@ const Contact = () => {
               <a href="https://drive.google.com/file/d/1-TymIXKRXCmiTpAhXS64vUrL4aciM7N3/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="soc-link" title="AI Engineer Resume">
                 <FaFileAlt size={22} />
               </a>
-              <a href="https://drive.google.com/file/d/1GR_XUVljZNknCv1Zzf-JE4-iBt4QOhCQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="soc-link" title="Software Developer Resume">
+              <a href="https://drive.google.com/file/d/1GR_XUVljZNknCv1Zzf-JE4-iBt4QOhCQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="soc-link" title="Software Resume">
                 <FaFileAlt size={22} style={{ color: '#06B6D4' }} />
               </a>
             </div>

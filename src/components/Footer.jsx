@@ -24,7 +24,7 @@ const Footer = () => {
             rel="noopener noreferrer" 
             className="flink"
           >
-            SWE Resume ↗
+            Software Resume ↗
           </a>
         </div>
       </div>

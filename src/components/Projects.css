@@ -178,3 +178,16 @@
   border-radius: 4px;
   color: var(--text-secondary);
 }
+
+.video-poster-wrapper:hover .video-poster-img {
+  transform: scale(1.05);
+}
+
+.video-poster-wrapper:hover .video-play-btn {
+  transform: scale(1.15);
+  box-shadow: 0 0 35px rgba(6, 182, 212, 0.9);
+}
+
+.video-poster-wrapper:hover .video-poster-overlay {
+  background: linear-gradient(to bottom, rgba(11, 15, 25, 0.2), rgba(11, 15, 25, 0.6)) !important;
+}

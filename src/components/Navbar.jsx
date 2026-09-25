@@ -79,7 +79,7 @@ const Navbar = () => {
                 rel="noopener noreferrer" 
                 className="resume-dropdown-item"
               >
-                <div className="dropdown-title">Software Developer</div>
+                <div className="dropdown-title">Software Resume</div>
                 <div className="dropdown-sub">SDE / SWE Resume ↗</div>
               </a>
             </div>
@@ -124,7 +124,7 @@ const Navbar = () => {
               rel="noopener noreferrer" 
               className="btn btn-outline mobile-resume-btn"
             >
-              Software Developer Resume
+              Software Resume
             </a>
           </div>
         </motion.div>
