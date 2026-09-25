@@ -49,15 +49,15 @@ export default function InteractiveParticleText({
 
       // Dynamically calculate font size to comfortably fit the container
       const testSize = 54;
-      offscreenContext.font = `800 ${testSize}px ${fontStack}`;
+      offscreenContext.font = `700 ${testSize}px ${fontStack}`;
       const testL1W = offscreenContext.measureText(line1).width;
 
       const scaleW = (width * 0.94) / testL1W;
       const scaleH = (height * 0.42) / testSize;
       const scale = Math.min(scaleW, scaleH);
-      const fontSize = Math.max(Math.min(Math.floor(testSize * scale), 62), 26);
+      const fontSize = Math.max(Math.min(Math.floor(testSize * scale), 60), 26);
 
-      offscreenContext.font = `800 ${fontSize}px ${fontStack}`;
+      offscreenContext.font = `700 ${fontSize}px ${fontStack}`;
       const l1Width = offscreenContext.measureText(line1).width;
       const l2Width = offscreenContext.measureText(line2).width;
 
@@ -80,13 +80,13 @@ export default function InteractiveParticleText({
       offscreenContext.fillStyle = grad;
       offscreenContext.fillText(line2, startX2, y2);
 
-      // Sample pixels
+      // Sample pixels with high precision threshold for sharp letter definition
       const imageData = offscreenContext.getImageData(0, 0, width, height).data;
       const particles = [];
 
-      const step = fontSize < 40 ? 1.7 : 2.1;
-      const baseRadius = fontSize < 40 ? 1.4 : Math.max(1.5, fontSize * 0.032);
-      const accentRadius = baseRadius * 1.3;
+      const step = 2.0;
+      const baseRadius = 1.05;
+      const accentRadius = 1.3;
 
       for (let y = 0; y < height; y += step) {
         const py = Math.floor(y);
@@ -94,18 +94,19 @@ export default function InteractiveParticleText({
           const px = Math.floor(x);
           const index = (py * width + px) * 4;
           const alpha = imageData[index + 3];
-          if (alpha < 24) continue;
+          // Filter out perimeter anti-aliasing blur for razor-sharp strokes
+          if (alpha < 95) continue;
 
           const red = imageData[index];
           const green = imageData[index + 1];
           const blue = imageData[index + 2];
 
-          const isAccent = (px + py) % 7 === 0 || (px + py) % 11 === 0;
-          const particleColor = `rgba(${red}, ${green}, ${blue}, 1)`;
+          const isAccent = (px + py) % 8 === 0;
+          const particleColor = `rgba(${red}, ${green}, ${blue}, 0.98)`;
 
           particles.push({
-            x: px + (Math.random() - 0.5) * 0.3,
-            y: py + (Math.random() - 0.5) * 0.3,
+            x: px,
+            y: py,
             baseX: px,
             baseY: py,
             vx: 0,
