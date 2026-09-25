@@ -48,16 +48,16 @@ export default function InteractiveParticleText({
       const fontStack = "'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
 
       // Dynamically calculate font size to comfortably fit the container
-      const testSize = 54;
-      offscreenContext.font = `800 ${testSize}px ${fontStack}`;
+      const testSize = 52;
+      offscreenContext.font = `700 ${testSize}px ${fontStack}`;
       const testL1W = offscreenContext.measureText(line1).width;
 
-      const scaleW = (width * 0.94) / testL1W;
-      const scaleH = (height * 0.42) / testSize;
+      const scaleW = (width * 0.92) / testL1W;
+      const scaleH = (height * 0.40) / testSize;
       const scale = Math.min(scaleW, scaleH);
-      const fontSize = Math.max(Math.min(Math.floor(testSize * scale), 62), 26);
+      const fontSize = Math.max(Math.min(Math.floor(testSize * scale), 58), 24);
 
-      offscreenContext.font = `800 ${fontSize}px ${fontStack}`;
+      offscreenContext.font = `700 ${fontSize}px ${fontStack}`;
       const l1Width = offscreenContext.measureText(line1).width;
       const l2Width = offscreenContext.measureText(line2).width;
 
@@ -80,13 +80,13 @@ export default function InteractiveParticleText({
       offscreenContext.fillStyle = grad;
       offscreenContext.fillText(line2, startX2, y2);
 
-      // Sample pixels
+      // Sample pixels with high precision and strict threshold for razor-sharp edges
       const imageData = offscreenContext.getImageData(0, 0, width, height).data;
       const particles = [];
 
-      const step = fontSize < 40 ? 1.7 : 2.1;
-      const baseRadius = fontSize < 40 ? 1.4 : Math.max(1.5, fontSize * 0.032);
-      const accentRadius = baseRadius * 1.3;
+      const step = 2.0;
+      const baseRadius = 0.95;
+      const accentRadius = 1.2;
 
       for (let y = 0; y < height; y += step) {
         const py = Math.floor(y);
@@ -94,18 +94,19 @@ export default function InteractiveParticleText({
           const px = Math.floor(x);
           const index = (py * width + px) * 4;
           const alpha = imageData[index + 3];
-          if (alpha < 24) continue;
+          // Filter out fuzzy anti-aliased border pixels for a crisp, clean outline
+          if (alpha < 110) continue;
 
           const red = imageData[index];
           const green = imageData[index + 1];
           const blue = imageData[index + 2];
 
-          const isAccent = (px + py) % 7 === 0 || (px + py) % 11 === 0;
-          const particleColor = `rgba(${red}, ${green}, ${blue}, 1)`;
+          const isAccent = (px + py) % 9 === 0;
+          const particleColor = `rgba(${red}, ${green}, ${blue}, 0.95)`;
 
           particles.push({
-            x: px + (Math.random() - 0.5) * 0.3,
-            y: py + (Math.random() - 0.5) * 0.3,
+            x: px,
+            y: py,
             baseX: px,
             baseY: py,
             vx: 0,
@@ -269,7 +270,22 @@ export default function InteractiveParticleText({
         className="block h-full w-full"
         aria-hidden="true"
       />
-      <h1 className="sr-only">{line1} {line2}</h1>
+      <h1 
+        className="sr-only" 
+        style={{ 
+          position: 'absolute', 
+          width: '1px', 
+          height: '1px', 
+          padding: 0, 
+          margin: '-1px', 
+          overflow: 'hidden', 
+          clip: 'rect(0, 0, 0, 0)', 
+          whiteSpace: 'nowrap', 
+          border: 0 
+        }}
+      >
+        {line1} {line2}
+      </h1>
     </div>
   );
 }
