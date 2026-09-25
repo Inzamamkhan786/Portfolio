@@ -108,8 +108,11 @@ const Contact = () => {
               <a href="https://www.codechef.com/users/md_haque_123" target="_blank" rel="noopener noreferrer" className="soc-link" title="CodeChef">
                 <span className="soc-text-icon">CC</span>
               </a>
-              <a href="https://drive.google.com/file/d/1LQZ4ZR1g9mD6gGCNszk7rJ9SAY9B0yd-/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="soc-link" title="Resume">
+              <a href="https://drive.google.com/file/d/1-TymIXKRXCmiTpAhXS64vUrL4aciM7N3/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="soc-link" title="AI Engineer Resume">
                 <FaFileAlt size={22} />
+              </a>
+              <a href="https://drive.google.com/file/d/1GR_XUVljZNknCv1Zzf-JE4-iBt4QOhCQ/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="soc-link" title="Software Developer Resume">
+                <FaFileAlt size={22} style={{ color: '#06B6D4' }} />
               </a>
             </div>
           </motion.div>

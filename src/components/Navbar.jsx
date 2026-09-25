@@ -16,6 +16,7 @@ const navLinks = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [resumeDropdownOpen, setResumeDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,10 +47,43 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="navbar-right desktop-only">
-          <a href="https://drive.google.com/file/d/1LQZ4ZR1g9mD6gGCNszk7rJ9SAY9B0yd-/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-outline resume-btn">
-            Resume
-          </a>
+        <div 
+          className="navbar-right desktop-only resume-dropdown-wrapper"
+          onMouseEnter={() => setResumeDropdownOpen(true)}
+          onMouseLeave={() => setResumeDropdownOpen(false)}
+        >
+          <button 
+            type="button"
+            className="btn btn-outline resume-btn"
+            onClick={() => setResumeDropdownOpen(prev => !prev)}
+            aria-expanded={resumeDropdownOpen}
+          >
+            Resume ▾
+          </button>
+
+          {resumeDropdownOpen && (
+            <div className="resume-dropdown-menu glass-panel">
+              <a 
+                href="https://drive.google.com/file/d/1-TymIXKRXCmiTpAhXS64vUrL4aciM7N3/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="resume-dropdown-item"
+              >
+                <div className="dropdown-title">AI Engineer</div>
+                <div className="dropdown-sub">haque_AI_Resume.pdf ↗</div>
+              </a>
+              <div className="dropdown-sep"></div>
+              <a 
+                href="https://drive.google.com/file/d/1GR_XUVljZNknCv1Zzf-JE4-iBt4QOhCQ/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="resume-dropdown-item"
+              >
+                <div className="dropdown-title">Software Developer</div>
+                <div className="dropdown-sub">SDE / SWE Resume ↗</div>
+              </a>
+            </div>
+          )}
         </div>
 
         <div className="mobile-menu-btn mobile-only" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -75,9 +109,24 @@ const Navbar = () => {
               <span className="nav-text">{link.name}</span>
             </a>
           ))}
-          <a href="https://drive.google.com/file/d/1LQZ4ZR1g9mD6gGCNszk7rJ9SAY9B0yd-/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-outline mobile-resume">
-            Resume
-          </a>
+          <div className="mobile-resume-container">
+            <a 
+              href="https://drive.google.com/file/d/1-TymIXKRXCmiTpAhXS64vUrL4aciM7N3/view?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-primary mobile-resume-btn"
+            >
+              AI Engineer Resume
+            </a>
+            <a 
+              href="https://drive.google.com/file/d/1GR_XUVljZNknCv1Zzf-JE4-iBt4QOhCQ/view?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-outline mobile-resume-btn"
+            >
+              Software Developer Resume
+            </a>
+          </div>
         </motion.div>
       )}
     </motion.nav>

@@ -64,6 +64,33 @@
   margin-bottom: 1.5rem;
 }
 
+.hero-particle-name {
+  width: 100%;
+  max-width: 540px;
+  height: 150px;
+  margin-bottom: 1.5rem;
+  cursor: crosshair;
+  position: relative;
+}
+
+.hero-resume-group {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.hero-resume-btn-secondary {
+  border: 1px solid var(--accent-cyan);
+  color: var(--text-primary);
+  background: rgba(6, 182, 212, 0.08);
+}
+
+.hero-resume-btn-secondary:hover {
+  background: rgba(6, 182, 212, 0.2);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+}
+
 .hero-roles {
   display: flex;
   flex-wrap: wrap;
@@ -212,6 +239,16 @@
   
   .hero-name {
     font-size: 3.5rem;
+  }
+  
+  .hero-particle-name {
+    margin: 0 auto 1.5rem;
+    height: 130px;
+    max-width: 440px;
+  }
+
+  .hero-resume-group {
+    justify-content: center;
   }
   
   .hero-roles {

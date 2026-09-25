@@ -11,12 +11,20 @@ const Footer = () => {
           <a href="#projects" className="flink">Projects</a>
           <a href="#contact" className="flink">Contact</a>
           <a 
-            href="https://drive.google.com/file/d/1LQZ4ZR1g9mD6gGCNszk7rJ9SAY9B0yd-/view?usp=sharing" 
+            href="https://drive.google.com/file/d/1-TymIXKRXCmiTpAhXS64vUrL4aciM7N3/view?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="flink"
           >
-            Resume ↗
+            AI Resume ↗
+          </a>
+          <a 
+            href="https://drive.google.com/file/d/1GR_XUVljZNknCv1Zzf-JE4-iBt4QOhCQ/view?usp=sharing" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flink"
+          >
+            SWE Resume ↗
           </a>
         </div>
       </div>

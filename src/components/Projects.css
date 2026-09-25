@@ -118,13 +118,38 @@
   flex-direction: column;
 }
 
+.project-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.project-quick-links {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.project-quick-icon {
+  color: var(--text-secondary);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-quick-icon:hover {
+  color: var(--accent-cyan);
+  transform: translateY(-2px);
+}
+
 .project-badge {
   font-size: 0.75rem;
   color: var(--accent-cyan);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 0.5rem;
 }
 
 .project-title {

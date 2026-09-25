@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaVideo } from 'react-icons/fa';
 import './Projects.css';
 
 import cloudStorageImg from '../assets/cloud_storage.png';
@@ -16,6 +16,17 @@ const projectsData = [
   {
     id: 1,
     category: 'fullstack',
+    title: 'SyncTube — Real-Time Watch Party',
+    desc: 'A full-stack collaborative YouTube watch party platform featuring synchronized video playback across all room members, live room chat, participant management with host/viewer roles, and real-time interactive reactions.',
+    images: ['/images/synctube_home.png', '/images/synctube_room.png'],
+    tags: ['React', 'Node.js', 'Express.js', 'Socket.io', 'PostgreSQL', 'Prisma', 'Redis', 'Tailwind CSS'],
+    codeLink: 'https://github.com/Inzamamkhan786/YouTube-Watch-Party',
+    demoLink: 'https://you-tube-watch-party-theta.vercel.app/',
+    videoLink: 'https://drive.google.com/file/d/1GPvfMgj98dacDt61nymFQ-4STLCBu7Gf/view'
+  },
+  {
+    id: 2,
+    category: 'fullstack',
     title: 'Cloud Storage System',
     desc: 'A full-stack cloud storage platform with user authentication, file upload/download, AWS S3 integration, duplicate-detection, and a per-operation storage billing system with usage dashboards.',
     images: ['/images/Billing1.png', '/images/Billing2.png', '/images/Billing3.png', '/images/Billing4.png', '/images/Billing5.png', '/images/Billing6.png'],
@@ -24,7 +35,7 @@ const projectsData = [
     demoLink: 'https://drive.google.com/file/d/1_Cd99IGAlCLEkTtQg_ipNuRoqSYGPcvn/view?usp=sharing'
   },
   {
-    id: 2,
+    id: 3,
     category: 'fullstack',
     title: 'Rentro — Vehicle Rental Platform',
     desc: 'A peer-to-peer vehicle rental ecosystem with Consumer and Provider roles. Features custom document verification (License/RC), pricing management, booking scheduling, and a real-time support chat system.',
@@ -34,7 +45,7 @@ const projectsData = [
     demoLink: 'https://rentro-tau.vercel.app/'
   },
   {
-    id: 3,
+    id: 4,
     category: 'fullstack',
     title: 'IngeneousStore — E-Commerce',
     desc: 'A full-stack e-commerce platform with product browsing, cart management, user authentication, delivery address flow, and complete order placement with COD support.',
@@ -43,7 +54,7 @@ const projectsData = [
     codeLink: 'https://github.com/Inzamamkhan786/E-commerce_Ingeneous_Store'
   },
   {
-    id: 4,
+    id: 5,
     category: 'vr',
     title: 'AR/VR Interview Simulator',
     desc: 'An immersive VR interview simulator built for Meta Quest 3 with realistic office environments, AI-driven questions using Whisper AI for voice processing and Ollama for local LLM responses.',
@@ -52,7 +63,7 @@ const projectsData = [
     demoLink: 'https://drive.google.com/file/d/1VTkDSjnYetQ7YRkX46__qhGCdYoGVewi/view?usp=sharing'
   },
   {
-    id: 5,
+    id: 6,
     category: 'ml',
     title: 'NovaCRM — AI Marketing Platform',
     desc: 'An AI-native CRM and marketing platform featuring smart audience segmentation, multi-channel campaigns (Email, SMS, WhatsApp, RCS), async delivery simulation, and a GPT-4o-powered AI Assistant to orchestrate campaigns.',
@@ -62,7 +73,7 @@ const projectsData = [
     demoLink: 'https://crm-marketing-n61t.vercel.app'
   },
   {
-    id: 6,
+    id: 7,
     category: 'ml',
     title: 'Autonomous Blog Writing Agent',
     desc: 'A stateful multi-agent system built using LangGraph that orchestrates specialized agents—Planner, Researcher, Writer, and Editor—to collaboratively write, review, and refine comprehensive articles with citation support.',
@@ -71,7 +82,7 @@ const projectsData = [
     codeLink: 'https://github.com/Inzamamkhan786/blog-writing-agent'
   },
   {
-    id: 7,
+    id: 8,
     category: 'fullstack',
     title: 'Meowtopia',
     desc: 'A cat-focused web platform where users can explore cat breeds via public APIs, share cat-related content, and interact with a community of cat lovers.',
@@ -80,7 +91,7 @@ const projectsData = [
     codeLink: 'https://github.com/Inzamamkhan786/Meowtopia'
   },
   {
-    id: 8,
+    id: 9,
     category: 'ml',
     title: 'Credit Score Prediction',
     desc: 'A machine learning model that evaluates financial parameters — income, credit utilization, late payments, credit lines — to predict whether an applicant has a Good or Risky credit profile.',
@@ -88,7 +99,7 @@ const projectsData = [
     tags: ['Python', 'Scikit-learn', 'Pandas', 'Machine Learning', 'Data Analysis']
   },
   {
-    id: 9,
+    id: 10,
     category: 'fullstack',
     title: 'Async Document System',
     desc: 'An asynchronous document processing platform where users can upload documents, track real-time processing status, and download results efficiently using background workers and queue-based architecture.',
@@ -157,13 +168,18 @@ const Projects = () => {
                     <div className="project-overlay">
                       <div className="project-links">
                         {project.codeLink && (
-                          <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="project-link-icon">
+                          <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="project-link-icon" title="View GitHub Code">
                             <FaGithub size={24} />
                           </a>
                         )}
                         {project.demoLink && (
-                          <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link-icon">
+                          <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link-icon" title="Open Live Site">
                             <FaExternalLinkAlt size={22} />
+                          </a>
+                        )}
+                        {project.videoLink && (
+                          <a href={project.videoLink} target="_blank" rel="noopener noreferrer" className="project-link-icon" title="Watch Demo Video">
+                            <FaVideo size={20} />
                           </a>
                         )}
                       </div>
@@ -172,10 +188,29 @@ const Projects = () => {
                 </div>
                 
                 <div className="project-content">
-                  <span className="project-badge">{
-                    project.category === 'fullstack' ? 'Full Stack' : 
-                    project.category === 'ml' ? 'AI & ML' : 'AR / VR'
-                  }</span>
+                  <div className="project-header-row">
+                    <span className="project-badge">{
+                      project.category === 'fullstack' ? 'Full Stack' : 
+                      project.category === 'ml' ? 'AI & ML' : 'AR / VR'
+                    }</span>
+                    <div className="project-quick-links">
+                      {project.codeLink && (
+                        <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="project-quick-icon" title="GitHub">
+                          <FaGithub size={17} />
+                        </a>
+                      )}
+                      {project.demoLink && (
+                        <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-quick-icon" title="Live Link">
+                          <FaExternalLinkAlt size={15} />
+                        </a>
+                      )}
+                      {project.videoLink && (
+                        <a href={project.videoLink} target="_blank" rel="noopener noreferrer" className="project-quick-icon" title="Demo Video">
+                          <FaVideo size={16} />
+                        </a>
+                      )}
+                    </div>
+                  </div>
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-desc">{project.desc}</p>
                   

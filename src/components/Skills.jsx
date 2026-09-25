@@ -23,6 +23,12 @@ const skillsData = [
   },
   {
     icon: '🧠',
+    title: 'Deep Learning & Neural Networks',
+    desc: 'Designing and training deep neural network architectures, Convolutional Neural Networks (CNN) for image recognition, and Retrieval-Augmented Generation (RAG) pipelines with vector search.',
+    tags: ['Deep Learning', 'CNN', 'RAG', 'Neural Networks', 'PyTorch', 'Vector Databases']
+  },
+  {
+    icon: '🧠',
     title: 'Machine Learning',
     desc: 'Developing ML models for classification, prediction, and data analysis using Python and Scikit-learn with real-world datasets.',
     tags: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Joblib']

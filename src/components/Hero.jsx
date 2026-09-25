@@ -5,6 +5,7 @@ import { SiLeetcode, SiCodechef } from 'react-icons/si';
 import portrait from '../assets/portrait.png';
 import './Hero.css';
 import StarField from './StarField';
+import InteractiveParticleText from './InteractiveParticleText';
 
 const Hero = () => {
   return (
@@ -28,9 +29,7 @@ const Hero = () => {
           </div>
           
           <h2 className="hero-greeting">HELLO, I'M</h2>
-          <h1 className="hero-name">
-            Md Inzamamul <br/> <span className="gradient-text">Haque</span>
-          </h1>
+          <InteractiveParticleText className="hero-particle-name" />
           
           <div className="hero-roles">
             <span className="role-tag">Full Stack Developer</span>
@@ -43,9 +42,24 @@ const Hero = () => {
           </p>
           
           <div className="hero-actions">
-            <a href="https://drive.google.com/file/d/1LQZ4ZR1g9mD6gGCNszk7rJ9SAY9B0yd-/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Download Resume
-            </a>
+            <div className="hero-resume-group">
+              <a 
+                href="https://drive.google.com/file/d/1-TymIXKRXCmiTpAhXS64vUrL4aciM7N3/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-primary"
+              >
+                AI Engineer Resume
+              </a>
+              <a 
+                href="https://drive.google.com/file/d/1GR_XUVljZNknCv1Zzf-JE4-iBt4QOhCQ/view?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-outline hero-resume-btn-secondary"
+              >
+                Software Developer Resume
+              </a>
+            </div>
             <div className="hero-socials">
               <a href="https://github.com/Inzamamkhan786" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <FaGithub size={22} />
